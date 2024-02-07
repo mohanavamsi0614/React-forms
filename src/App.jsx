@@ -30,9 +30,6 @@ function App() {
     if (!data.number){
       d.number="enter the number"
     }
-    if(!number.test(data.number)){
-      d.number="enter in correct"
-    }
     seterror(d)
   }
   function sub(){
@@ -45,7 +42,7 @@ function App() {
     <>
     <div className='form'>
       <form>
-      {Object.keys(error).length==0 && data.submit ?(<div><h2>Submited</h2></div>) :Object.keys(error).length!=0?(<h2>Something is fishy</h2>):("") }
+      {Object.keys(error).length==0 && data.submit ?(<div className='light'><h2>{data.fname} Submited!</h2></div>) :Object.keys(error).length!=0?(<h2>Something is fishy</h2>):("") }
         <label htmlFor='fname'>First Name</label>
         <input
           name='fname'
